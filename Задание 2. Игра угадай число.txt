@@ -1,0 +1,25 @@
+Ссылка на googlecollab: https://colab.research.google.com/drive/1umiCkjhwISK6CKofNdK8F34hAIg7DEJA?usp=sharing
+
+Сам код:
+print('Введите число: ')
+my = int(input())
+print('Осталось попыток - ', 6)
+import random
+x = random.randint(1,100)
+i=0
+while x!=my and i<6:
+  if my < x:
+    print('Загаданное число больше', my)
+    my = int(input())
+    i+=1
+    print('Осталось попыток - ', 6-i)
+  else:
+    print('Загаданное число меньше', my)
+    my = int(input())
+    i+=1
+    print('Осталось попыток - ', 6-i)
+if my==x :
+  print('Вы угадали! Это -', my)  
+else:
+  print('Попытки закончились :(')
+  print('Загаданное число было - ', x)
